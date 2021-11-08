@@ -21,6 +21,7 @@ const [loading, setLoading] = useState(true)
 
 
 const signInWithGoogle=()=>{
+    setLoading(true)
    return signInWithPopup(auth, googleProvider)
    .finally(() => { setLoading(false) });
 }
@@ -124,13 +125,14 @@ const logOut=()=>{
 }
 
 useEffect(()=>{
+    setLoading(true)
     onAuthStateChanged(auth,user=>{
         if(user){
             setUser(user)
         }
 
-    })
-    setLoading(false);
+    });
+    
 },[])
     return{
         user,
