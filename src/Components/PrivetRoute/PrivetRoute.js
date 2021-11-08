@@ -5,7 +5,7 @@ function PrivateRoute({ children, ...rest }) {
 const {AllContexts}=useAuth();
 const {user,loading }=AllContexts;
 if (loading){
-  return<Spinner animation="border" />
+  return'loading'
 };
     return (
       <Route
