@@ -1,0 +1,32 @@
+.caption{
+    color: whitesmoke;
+    background: linear-gradient(90deg, rgb(64, 150, 200) 0%, rgb(9, 58, 121) 35%, 
+    rgb(3, 95, 68) 100%);
+    text-align: center;
+    padding: 15px 0 15px 0;
+    
+}
+
+div a{
+    font-size: 20px;
+}
+.headerChild{
+    display: flex;
+    align-items: center;
+}
+.header a{
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 10px 12px;
+}
+.user-name > img {
+    width: 80px;
+    border-radius: 100%;
+}
+.logout{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;    
+}

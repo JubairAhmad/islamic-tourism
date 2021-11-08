@@ -1,0 +1,16 @@
+
+.footer{
+    /* background: linear-gradient(90deg, rgb(64, 150, 200) 0%, rgb(9, 58, 121) 35%, 
+    rgb(3, 95, 68) 100%); */
+
+    
+
+    background: linear-gradient(90deg, rgb(3, 95, 68)0%, rgb(28, 94, 182) 35%, rgb(64, 150, 200) 100%);
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 30px;
+}
+.footer div p,small{
+    text-align: center;
+}

@@ -1,0 +1,10 @@
+.updt-crd{
+    height: 700px;
+}
+.myBooking form{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 0 auto;
+   padding: 35px;
+}

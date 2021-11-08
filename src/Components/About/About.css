@@ -1,0 +1,13 @@
+.about{
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+div > img{
+    padding:05px 30px 30px 30px;
+    margin-bottom: 20px;
+}
+.about > div > p{
+    color: black;
+    font-weight: normal;
+}

@@ -1,0 +1,22 @@
+.card{
+    height: 550px;
+}
+.card >img{
+    border-radius: 20px;
+    padding: 10px;
+}
+button{
+    border:none;
+    background: linear-gradient(90deg,   rgb(10, 167, 120) 35%, rgb(107, 238, 231) 100%);
+    padding:5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+    
+    margin: 0 4px 0 0;
+    border-radius: 25px;
+}
+.btn button{
+    margin: 0 4px 0 0;
+    border-radius: 25px;
+}
