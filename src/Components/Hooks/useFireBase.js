@@ -17,13 +17,13 @@ const [error,setError]=useState('');
 const [email, setEmail]=useState('');
 const [password, setPassowrd]=useState('');
 const[isLogin,setIsLogin]=useState(false)
-const [loading, setLoading] = useState(true)
+const [isLoading, setIsLoading] = useState(true)
 
 
 const signInWithGoogle=()=>{
-    setLoading(true)
+    setIsLoading(true)
    return signInWithPopup(auth, googleProvider)
-   .finally(() => { setLoading(false) });
+   .finally(() => { setIsLoading(false) });
 }
 
 
@@ -75,6 +75,25 @@ const processLogin= (email,password)=>{
     })
 }
 
+useEffect(() => {
+    const unsubscribed = onAuthStateChanged(auth, user => {
+        if (user) {
+            setUser(user);
+        }
+        else {
+            setUser({})
+        }
+        setIsLoading(false);
+    });
+    return () => unsubscribed;
+}, [])
+
+
+
+
+
+
+
 
 const registerNewUser=(email, password)=>{
     createUserWithEmailAndPassword(auth,email,password)
@@ -121,11 +140,11 @@ const logOut=()=>{
  .then(()=>{
     setUser({})
  })
- .finally(() => setLoading(false));
+ .finally(() => setIsLoading(false));
 }
 
 useEffect(()=>{
-    setLoading(true)
+   
     onAuthStateChanged(auth,user=>{
         if(user){
             setUser(user)
@@ -146,7 +165,7 @@ useEffect(()=>{
         handlePassowrd,
         toggleLogin,
         isLogin,
-        loading,
+         isLoading,
         handleResetPassword,
         handleNameChange
     }
