@@ -2,7 +2,8 @@ import { Redirect, Route } from "react-router";
 import useAuth from '../Hooks/useAuth';
 function PrivateRoute({ children, ...rest }) {
 const {AllContexts}=useAuth();
-const {user}=AllContexts;
+const {user,loading }=AllContexts;
+if (loading) return 'loading';
     return (
       <Route
         {...rest}

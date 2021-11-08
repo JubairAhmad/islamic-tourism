@@ -10,16 +10,19 @@ const googleProvider= new GoogleAuthProvider();
 const auth = getAuth();
 
 const useFireBase = () => {
+
 const [user,setUser]=useState({});
 const [name,setName]=useState({});
 const [error,setError]=useState('');
 const [email, setEmail]=useState('');
 const [password, setPassowrd]=useState('');
 const[isLogin,setIsLogin]=useState(false)
+const [loading, setLoading] = useState(true)
+
 
 const signInWithGoogle=()=>{
    return signInWithPopup(auth, googleProvider)
-    
+   .finally(() => { setLoading(false) });
 }
 
 
@@ -117,6 +120,7 @@ const logOut=()=>{
  .then(()=>{
     setUser({})
  })
+ .finally(() => setLoading(false));
 }
 
 useEffect(()=>{
@@ -124,7 +128,9 @@ useEffect(()=>{
         if(user){
             setUser(user)
         }
+
     })
+    setLoading(false);
 },[])
     return{
         user,
@@ -138,6 +144,7 @@ useEffect(()=>{
         handlePassowrd,
         toggleLogin,
         isLogin,
+        loading,
         handleResetPassword,
         handleNameChange
     }

@@ -10,7 +10,7 @@ const LogIn = () => {
    const {signInWithGoogle, setUser, setError}=AllContexts;
 
    const location=useLocation()
-   const redirect=location?.state?.from;
+   const redirect=location?.state?.from || '/';
    const history=useHistory()
    
     return (
