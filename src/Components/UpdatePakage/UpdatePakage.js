@@ -10,7 +10,7 @@ const UpdatePakage = () => {
     const {id}=useParams()
 
     useEffect(()=>{
-        const url=`http://localhost:5000/shedules/${id}`;
+        const url=`https://mighty-dawn-03979.herokuapp.com/shedules/${id}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setUpdate(data))
@@ -46,7 +46,7 @@ const UpdatePakage = () => {
         }
 
         const handleUpdateUser  = e => {
-            const url = `http://localhost:5000/shedules/${id}`;
+            const url = `https://mighty-dawn-03979.herokuapp.com/shedules/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

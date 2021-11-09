@@ -12,7 +12,7 @@ const ManageAllBooking = () => {
    const [isDeleted,setIsDeleted]=useState(null)
    console.log(orders);
     useEffect(()=>{
-        fetch(`http://localhost:5000/myOders/${email}`)
+        fetch(`https://mighty-dawn-03979.herokuapp.com/myOders/${email}`)
         .then(res=>res.json())
 
 
@@ -23,7 +23,7 @@ const ManageAllBooking = () => {
 
     const handleDelete=(id)=>{
         console.log(id);
-        fetch(`http://localhost:5000/deleteProduct/${id}`,{
+        fetch(`https://mighty-dawn-03979.herokuapp.com/deleteProduct/${id}`,{
             method:"DELETE",
         })
        .then(res=>res.json())

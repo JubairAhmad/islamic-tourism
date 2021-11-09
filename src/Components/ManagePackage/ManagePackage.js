@@ -12,14 +12,14 @@ const ManagePackage = () => {
 
 
 useEffect(()=>{
-    fetch(`http://localhost:5000/shedules`)
+    fetch(`https://mighty-dawn-03979.herokuapp.com/shedules`)
         .then(res=>res.json())
         .then(data=> setpakes(data))
 },[])
  
     
         const handelDeleteUser= id =>{
-            const url=`http://localhost:5000/shedules/${id}`;
+            const url=`https://mighty-dawn-03979.herokuapp.com/shedules/${id}`;
             fetch(url , {
                 method:'DELETE'
             })

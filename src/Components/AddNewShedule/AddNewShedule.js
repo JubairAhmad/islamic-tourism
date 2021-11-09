@@ -18,7 +18,7 @@ const AddService = () => {
   const onSubmit = data => {
     //   console.log(data)
 
-      axios.post('http://localhost:5000/shedules', data)
+      axios.post('https://mighty-dawn-03979.herokuapp.com/shedules', data)
         .then(res=>{
             if (res.data.insertedId) {
                 alert('data, database a gece mama...akhon chil koro!!!')

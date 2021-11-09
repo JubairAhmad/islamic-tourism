@@ -18,7 +18,7 @@ const HomeShedule = (props) => {
       data.email=`${email}`
       delete shedule._id;
       
-      fetch('http://localhost:5000/booking',{
+      fetch('https://mighty-dawn-03979.herokuapp.com/booking',{
           method:'post',
           headers:{
               'content-type':'application/json'

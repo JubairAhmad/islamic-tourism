@@ -19,8 +19,8 @@ const Header = () => {
                 
                 
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Navbar.Brand to="/home" className="fw-bold  text-white">ISLAMIC <span style={{color:"#65E6FA"}}>TOUR&TRAVELS</span> </Navbar.Brand>
-                <Nav className="ms-auto header">
+                <Navbar.Brand to="/home" className="fw-bold  text-white">ISLAMIC <span style={{color:"#65E6FA"}}>TRAVELS</span> </Navbar.Brand>
+                <Nav className=" header">
                     <Nav.Link as={NavLink} className="text-light" to="/home">Home</Nav.Link>
                     <Nav.Link  className="text-light" as={NavLink} to="/packages">Packages</Nav.Link>
                     <Nav.Link  className="text-light" as={NavLink} to="/about">About</Nav.Link>
